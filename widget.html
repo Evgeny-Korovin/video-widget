@@ -1,0 +1,32 @@
+<style>.fixed-video-wrap {display: none; position: fixed;left: 50px;bottom: 50px;cursor: pointer;border-radius: 0px;transition: all 0.5s ease-in-out;z-index: 10;height: 180px;opacity: 1;box-sizing: border-box;}
+           .fixed-video-line {cursor: default;position: absolute;bottom: calc(100% + 4px);left: 10px;background-image: url(https://evgeny-korovin.github.io/img/line.png);background-size: contain;background-repeat: no-repeat;padding-bottom: 70px;padding-left: 60px;}
+           .fixed-video-line span {font-size: 15px;position: relative;top: -10px;right: -10px;color: #100068;background-color:#fffb05;padding: 0px 5px 0px 5px;border-radius: 4px;}
+           .fixed-video-wrap * {box-sizing: border-box;}
+           .fixed-video-wrap.before-closed {opacity: 0;left: -50px;}
+           .fixed-video-wrap.is-hidden {opacity: 0;}
+           .fixed-video-wrap.is-opened {height: 400px;}
+           .fixed-video-wrap video {border: 3px solid #ff4759;box-shadow: 0px 0px 10px #ffffff;-webkit-box-shadow: 0px 0px 10px #ffffff;display: block;border-radius: 20px;transition: all 0.35s ease-in-out;height: calc(100% - 6px);width: auto;padding: 0px;margin: 0px;}
+           .fixed-video-button {display: none;font-size: 17px;text-align: center;padding: 11px;text-decoration: none!important;position: absolute;bottom: 50px;top: auto;left: 20px;width: calc(100% - 40px);z-index: -1;opacity: 0;min-width: 180px;border-radius: 3px;}
+           .fixed-video-wrap.is-opened .fixed-video-button {display: block;}
+           .fixed-video-wrap.is-opened .fixed-video-line {display: none;}
+           .fixed-video-close, .fixed-video-roll-up {text-decoration: none; font-size: 30px;color: #fff;line-height: 20px;position: absolute;top: 10px;right: 10px;z-index: 1;opacity: 1;}
+           .fixed-video-roll-up {top: 15px;right: 15px;z-index: -1;opacity: 0;}
+           .fixed-video-wrap.is-opened .fixed-video-close {z-index: -1;opacity: 0;}
+           .fixed-video-wrap.is-opened .fixed-video-roll-up {z-index: 1;opacity: 1;}
+           .fixed-video-wrap.is-opened .fixed-video-made-in {z-index: 1;opacity: 1;}
+           @media (max-width: 768px) {.fixed-video-wrap {left: 10px;bottom: 10px;}}
+    </style>
+    <style>.fixed-video-button{background-color:#fffb05;color:#000000}</style>
+    <style>.fixed-video-button:hover{background-color:#ffd105}@media (max-width: 768px) {.fixed-video-wrap {bottom: 70px;}}</style>
+
+    <div class="fixed-video-wrap">						
+        <div class="fixed-video-line"><span>Нажмите!</span></div>			
+            <a href="javascript:void(0)" class="fixed-video-close" id="fixed-video-close">×</a>			
+            <a href="javascript:void(0)" class="fixed-video-roll-up" id="fixed-video-roll-up">—</a>						
+            <video loop="" playsinline="" webkit-playsinline="" muted="" preload="auto" autoplay="autoplay" controlslist="nodownload" disablepictureinpicture="" id="fixed-video" src="https://app.lead.media/videos/3fe2b26d73a74c19d6f8e2955aa4ce5b.mp4" type="video/mp4" style="border-color:#fffb05">							<source src="https://app.lead.media/videos/3fe2b26d73a74c19d6f8e2955aa4ce5b.mp4" type="video/mp4">						
+            </video>						
+            <a href="#videoform" class="fixed-video-button" style="opacity: 0; z-index: -1;">Заказать звонок</a>											
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/video-widget.js"></script>
